@@ -1,6 +1,6 @@
 {
     "name": "@r-ui/fetch",
-    "version": "0.5.0",
+    "version": "0.6.0-beta",
     "description": "A fetch wrapper.",
     "main": "lib/index.min.js",
     "scripts": {

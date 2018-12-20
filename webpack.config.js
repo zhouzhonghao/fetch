@@ -15,6 +15,10 @@ module.exports = (env, options) => {
                 './src/index.js'
             ]
         },
+        externals: {
+            '@babel/polyfill': '@babel/polyfill',
+            'url': 'url'
+        },
         output: {
             path: path.join(__dirname, './lib'),
             filename: isProd ? '[name].min.js' : '[name].js',
@@ -34,17 +38,17 @@ module.exports = (env, options) => {
                     use: [
                         ...(
                             isProd
-                            ? (
-                                []
-                            )
-                            : ([
-                                {
-                                    loader: 'js-prettier-loader',
-                                    options: {
-                                        parser: 'babylon'
+                                ? (
+                                    []
+                                )
+                                : ([
+                                    {
+                                        loader: 'js-prettier-loader',
+                                        options: {
+                                            parser: 'babylon'
+                                        }
                                     }
-                                }
-                            ])
+                                ])
                         ),
                         {
                             loader: 'babel-loader',
