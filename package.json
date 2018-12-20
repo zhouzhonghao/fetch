@@ -1,0 +1,31 @@
+{
+    "name": "@r-ui/fetch",
+    "version": "0.5.0",
+    "description": "A fetch wrapper.",
+    "main": "lib/index.min.js",
+    "scripts": {
+        "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+        "dev-build": "cross-env NODE_ENV=development webpack --config webpack.config.js"
+    },
+    "keywords": [
+        "fetch"
+    ],
+    "author": "zhouzhonghao",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.2.1",
+        "@babel/plugin-proposal-decorators": "^7.2.2",
+        "@babel/preset-env": "^7.2.0",
+        "babel-loader": "^8.0.4",
+        "cross-env": "^5.2.0",
+        "js-prettier-loader": "0.0.1",
+        "prettier": "^1.15.3",
+        "webpack": "^4.28.0",
+        "webpack-cli": "^3.1.2"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0",
+        "url": "^0.11.0"
+    }
+}
