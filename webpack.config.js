@@ -10,14 +10,14 @@ module.exports = (env, options) => {
     const isProd = (options.mode || process.env.NODE_ENV) == 'production';
     return {
         mode: isProd ? 'production' : 'development',
+        externals: {
+            '@babel/polyfill': '@babel/polyfill',
+            'url': 'url'
+        },
         entry: {
             index: [
                 './src/index.js'
             ]
-        },
-        externals: {
-            '@babel/polyfill': '@babel/polyfill',
-            'url': 'url'
         },
         output: {
             path: path.join(__dirname, './lib'),
