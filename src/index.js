@@ -10,7 +10,7 @@ const Component = async (options) => {
     let { withCredentials = true, url = '', method = 'GET', body, data, ...others } = options;
     let urlEntity = urlUtils.parse(url);
     if (typeof (data) == 'string'
-        || typeof (data) == 'object') {
+        || (typeof (data) == 'object' && data != null)) {
         if (method.toUpperCase() == 'GET') {
             if (data instanceof global.URLSearchParams) {
                 data = data.toString();
@@ -80,7 +80,7 @@ const Component = async (options) => {
                         }
                     )
                     : (
-                        typeof (body) == 'object'
+                        typeof (body) == 'object' && body != null
                             ? (
                                 {
                                     body: JSON.stringify(body)
