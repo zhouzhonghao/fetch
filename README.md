@@ -6,10 +6,6 @@ Fetch url contents.
 
     npm install @r-ui/fetch
 
-## Usage
-
-See examples folder for a complete example
-
 ## Fetch from URL
 
 `fetch(options)`
@@ -22,7 +18,6 @@ Example
 
     var fetch = require("fetch");
 
-    // source file is iso-8859-15 but it is converted to utf-8 automatically
     fetch({
         url: "http://localhost/"
     });
