@@ -1,6 +1,6 @@
 {
     "name": "@r-ui/fetch",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "description": "A fetch wrapper.",
     "main": "lib/index.min.js",
     "scripts": {
@@ -12,6 +12,10 @@
     ],
     "author": "zhouzhonghao",
     "license": "MIT",
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0",
+        "url": "^0.11.0"
+    },
     "devDependencies": {
         "@babel/core": "^7.2.2",
         "@babel/plugin-proposal-class-properties": "^7.2.1",
@@ -23,9 +27,5 @@
         "prettier": "^1.15.3",
         "webpack": "^4.28.0",
         "webpack-cli": "^3.1.2"
-    },
-    "dependencies": {
-        "@babel/polyfill": "^7.0.0",
-        "url": "^0.11.0"
     }
 }

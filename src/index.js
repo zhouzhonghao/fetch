@@ -16,7 +16,10 @@ const Component = async (options) => {
                 data = data.toString();
             }
             if (typeof (data) != 'string') {
-                data = Object.keys(data).map((key) => {
+                data = Object.keys(data).filter((key) => {
+                    let value = data[key];
+                    return value !== null && value !== undefined;
+                }).map((key) => {
                     let value = data[key];
                     if (typeof (value) == 'object') {
                         value = JSON.stringify(value);
@@ -48,7 +51,10 @@ const Component = async (options) => {
                     data = data.toString();
                 }
                 if (typeof (data) != 'string') {
-                    data = Object.keys(data).map((key) => {
+                    data = Object.keys(data).filter((key) => {
+                        let value = data[key];
+                        return value !== null && value !== undefined;
+                    }).map((key) => {
                         let value = data[key];
                         if (typeof (value) == 'object') {
                             value = JSON.stringify(value);
