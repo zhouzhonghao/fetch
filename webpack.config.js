@@ -51,7 +51,13 @@ module.exports = (env, options) => {
                             options: {
                                 presets: [
                                     [
-                                        '@babel/preset-env'
+                                        '@babel/preset-env',
+                                        {
+                                            "targets": {
+                                                "ie": 10
+                                            },
+                                            "useBuiltIns": false
+                                        }
                                     ]
                                 ],
                                 plugins: [
