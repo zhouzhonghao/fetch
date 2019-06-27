@@ -1,18 +1,14 @@
-'use strict'
-
-const path = require('path');
-const webpack = require('webpack');
-const resolve = (dir) => {
+var path = require('path');
+var webpack = require('webpack');
+var resolve = (dir) => {
     path.join(__dirname, '.', dir);
 };
 
 module.exports = (env, options) => {
-    const isProd = (options.mode || process.env.NODE_ENV) == 'production';
+    var isProd = (options.mode || process.env.NODE_ENV) == 'production';
     return {
         mode: isProd ? 'production' : 'development',
         externals: {
-            '@babel/polyfill': '@babel/polyfill',
-            'url': 'url'
         },
         entry: {
             index: [
