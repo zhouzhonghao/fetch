@@ -1,6 +1,6 @@
 {
     "name": "@r-ui/fetch",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "description": "A fetch wrapper.",
     "main": "lib/index.min.js",
     "scripts": {
@@ -13,7 +13,6 @@
     "author": "zhouzhonghao",
     "license": "MIT",
     "dependencies": {
-        "@babel/polyfill": "^7.0.0",
         "url": "^0.11.0"
     },
     "devDependencies": {
